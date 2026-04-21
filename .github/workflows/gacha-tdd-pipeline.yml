@@ -4,11 +4,11 @@ on:
 
   push:
 
-    branches: [ develop ]
+分支: [main, develop ]
 
   pull_request:
 
-    branches: [ main, develop ]
+分支: [ main, develop ]
 
 
 jobs:
