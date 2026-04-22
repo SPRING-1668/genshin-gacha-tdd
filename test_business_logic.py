@@ -22,7 +22,8 @@ class TestGachaProbability:
         expected_prob = 0.066
         for pull in range(74, 90):
             prob = calculate_gacha_probability(pull)
-            assert prob == expected_prob, f"第{pull}抽概率错误
+            # 使用近似比较，容忍浮点数精度误差
+            assert abs(prob - expected_prob) < 1e-9, f"第{pull}抽概率错误"
             expected_prob += 0.06
 
 
